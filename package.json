@@ -1,6 +1,6 @@
 {
-  "name": "SimpleAwsCloudMap",
-  "version": "1.0.0",
+  "name": "simple-aws-cloud-map",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,13 @@
     "start": "ts-node src/index.ts"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "jimx6",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jimx6/simple-aws-cloud-map.git"
+  },
+  "license": "MIT",
+  "private": false,
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
