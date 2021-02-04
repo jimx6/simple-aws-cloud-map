@@ -7,6 +7,11 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "no-empty": "warn",
+    "no-cond-assign": ["error", "always"],
+    "indent": ["error", 2],
+    "quotes": ["error", "double"],
+    "comma-dangle": ["error", "always"]
   }
 }

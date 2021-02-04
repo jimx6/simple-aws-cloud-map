@@ -1,1 +1,4 @@
-export { SimpleAwsCloudMap, SimpleAwsCloudMapConfig } from './SimpleAwsCloudMap';
+export {
+  SimpleAwsCloudMap,
+  SimpleAwsCloudMapConfig,
+} from "./SimpleAwsCloudMap";
