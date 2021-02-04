@@ -1,4 +1,4 @@
-import { SimpleAwsCloudMapConfig } from './SimpleAwsCloudMap';
+import { SimpleAwsCloudMapConfig } from "./SimpleAwsCloudMap";
 
 export interface ParserOutput {
   namespace: string;
@@ -14,18 +14,19 @@ export class Parser {
   }
 
   read(inputString: string): ParserOutput {
-    const sp = inputString.split('->')
-    const instance = sp[2] || ''
-    const enviroment = this.config.environment || ''
+    const sp = inputString.split("->");
+    const instance = sp[2] || "";
+    const enviroment = this.config.environment || "";
 
     if (!instance && !enviroment) {
-      throw new Error('Invalid instance id.');
+      throw new Error("Invalid instance id.");
     }
 
-    return { 
-      namespace: sp[0], 
+    return {
+      namespace: sp[0],
       serviceName: sp[1],
-      instanceId: this.config.mapEnvToInstanceId === true ? enviroment : instance
-    }
+      instanceId:
+        this.config.mapEnvToInstanceId === true ? enviroment : instance,
+    };
   }
 }

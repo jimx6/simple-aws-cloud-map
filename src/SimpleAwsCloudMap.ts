@@ -1,15 +1,15 @@
-import { ServiceDiscoveryClientConfig } from '@aws-sdk/client-servicediscovery';
-import { Parser } from './Parser';
-import { AwsAdapter, AwsAdapterSendOutput } from './aws/AwsAdapter';
-import { ServiceDiscoveryClient } from '@aws-sdk/client-servicediscovery';
+import { ServiceDiscoveryClientConfig } from "@aws-sdk/client-servicediscovery";
+import { Parser } from "./Parser";
+import { AwsAdapter, AwsAdapterSendOutput } from "./aws/AwsAdapter";
+import { ServiceDiscoveryClient } from "@aws-sdk/client-servicediscovery";
 const defaultOptions: SimpleAwsCloudMapConfig = {
   awsClient: {},
-  mapEnvToInstanceId: true
-}
+  mapEnvToInstanceId: true,
+};
 export interface SimpleAwsCloudMapConfig {
-  awsClient: ServiceDiscoveryClientConfig
-  environment?: string
-  mapEnvToInstanceId?: boolean
+  awsClient: ServiceDiscoveryClientConfig;
+  environment?: string;
+  mapEnvToInstanceId?: boolean;
 }
 
 export class SimpleAwsCloudMap {
