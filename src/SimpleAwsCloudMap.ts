@@ -1,6 +1,6 @@
 import { ServiceDiscoveryClientConfig } from '@aws-sdk/client-servicediscovery';
 import { Parser } from './Parser';
-import { AwsAdapter } from './aws/AwsAdapter';
+import { AwsAdapter, AwsAdapterSendOutput } from './aws/AwsAdapter';
 import { ServiceDiscoveryClient } from '@aws-sdk/client-servicediscovery';
 const defaultOptions: SimpleAwsCloudMapConfig = {
   awsClient: {},
@@ -24,7 +24,7 @@ export class SimpleAwsCloudMap {
     this.awsAdapter = new AwsAdapter(client);
   }
 
-  async get(inputString: string): Promise<any> {
+  async get(inputString: string): Promise<AwsAdapterSendOutput> {
     const requestAws = this.parser.read(inputString);
 
     return this.awsAdapter.send(requestAws);
